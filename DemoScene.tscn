@@ -1,0 +1,369 @@
+[gd_scene load_steps=45 format=3 uid="uid://bm4mi5pvfujb4"]
+
+[ext_resource type="Script" path="res://DemoScene.gd" id="1_bc5k7"]
+[ext_resource type="Script" path="res://addons/rmsmartshape/shapes/shape.gd" id="1_hwwxx"]
+[ext_resource type="Script" path="res://addons/rmsmartshape/vertex_properties.gd" id="2_j3mow"]
+[ext_resource type="Script" path="res://addons/rmsmartshape/shapes/point.gd" id="3_26gyn"]
+[ext_resource type="Script" path="res://addons/rmsmartshape/shapes/point_array.gd" id="4_qkxmh"]
+[ext_resource type="Script" path="res://addons/rmsmartshape/materials/edge_material_metadata.gd" id="5_tdx67"]
+[ext_resource type="Script" path="res://addons/rmsmartshape/materials/edge_material.gd" id="6_12nd4"]
+[ext_resource type="Texture2D" uid="uid://bluivyhy5ka2t" path="res://icon.svg" id="7_1cnfg"]
+[ext_resource type="Script" path="res://addons/rmsmartshape/normal_range.gd" id="8_s8hl0"]
+[ext_resource type="Script" path="res://addons/rmsmartshape/materials/shape_material.gd" id="9_cf16v"]
+
+[sub_resource type="Resource" id="Resource_r6p0i"]
+script = ExtResource("8_s8hl0")
+begin = 0.0
+distance = 360.0
+edgeRendering = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_mcvq6"]
+script = ExtResource("5_tdx67")
+normal_range = SubResource("Resource_r6p0i")
+weld = true
+taper_sharp_corners = false
+render = true
+z_index = 0
+z_as_relative = true
+offset = 0.0
+
+[sub_resource type="Resource" id="Resource_kgqhn"]
+script = ExtResource("2_j3mow")
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id="Resource_b3eah"]
+script = ExtResource("3_26gyn")
+position = Vector2(179.907, -125.336)
+point_in = Vector2(0, 0)
+point_out = Vector2(0, 0)
+properties = SubResource("Resource_kgqhn")
+
+[sub_resource type="Resource" id="Resource_sqji4"]
+script = ExtResource("2_j3mow")
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id="Resource_4rtrd"]
+script = ExtResource("3_26gyn")
+position = Vector2(-186.395, -129.216)
+point_in = Vector2(0, 0)
+point_out = Vector2(0, 0)
+properties = SubResource("Resource_sqji4")
+
+[sub_resource type="Resource" id="Resource_ln0qm"]
+script = ExtResource("2_j3mow")
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id="Resource_uie70"]
+script = ExtResource("3_26gyn")
+position = Vector2(-190.753, 215.603)
+point_in = Vector2(0, 0)
+point_out = Vector2(0, 0)
+properties = SubResource("Resource_ln0qm")
+
+[sub_resource type="Resource" id="Resource_dqexi"]
+script = ExtResource("2_j3mow")
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id="Resource_wscl2"]
+script = ExtResource("3_26gyn")
+position = Vector2(186.795, 210.916)
+point_in = Vector2(0, 0)
+point_out = Vector2(0, 0)
+properties = SubResource("Resource_dqexi")
+
+[sub_resource type="Resource" id="Resource_2fkp8"]
+script = ExtResource("2_j3mow")
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id="Resource_bcvqr"]
+script = ExtResource("3_26gyn")
+position = Vector2(179.907, -125.336)
+point_in = Vector2(0, 0)
+point_out = Vector2(0, 0)
+properties = SubResource("Resource_2fkp8")
+
+[sub_resource type="Resource" id="Resource_meie8"]
+script = ExtResource("4_qkxmh")
+_points = {
+0: SubResource("Resource_b3eah"),
+1: SubResource("Resource_4rtrd"),
+2: SubResource("Resource_uie70"),
+3: SubResource("Resource_wscl2"),
+4: SubResource("Resource_bcvqr")
+}
+_point_order = PackedInt32Array(4, 3, 2, 1, 0)
+_constraints = {
+Vector2i(0, 4): 15
+}
+_next_key = 6
+_material_overrides = {
+Vector2i(1, 0): SubResource("Resource_mcvq6")
+}
+tessellation_stages = 3
+tessellation_tolerance = 6.0
+curve_bake_interval = 20.0
+
+[sub_resource type="Resource" id="Resource_3ir8n"]
+script = ExtResource("6_12nd4")
+textures = Array[Texture2D]([ExtResource("7_1cnfg")])
+textures_corner_outer = Array[Texture2D]([])
+textures_corner_inner = Array[Texture2D]([])
+textures_taper_left = Array[Texture2D]([])
+textures_taper_right = Array[Texture2D]([])
+textures_taper_corner_left = Array[Texture2D]([])
+textures_taper_corner_right = Array[Texture2D]([])
+randomize_texture = false
+use_corner_texture = false
+use_taper_texture = false
+fit_mode = 0
+
+[sub_resource type="Resource" id="Resource_fo1bp"]
+script = ExtResource("8_s8hl0")
+begin = 0.0
+distance = 360.0
+edgeRendering = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_ooi2v"]
+script = ExtResource("5_tdx67")
+edge_material = SubResource("Resource_3ir8n")
+normal_range = SubResource("Resource_fo1bp")
+weld = true
+taper_sharp_corners = false
+render = true
+z_index = 0
+z_as_relative = true
+offset = 0.0
+
+[sub_resource type="Resource" id="Resource_c3btm"]
+script = ExtResource("9_cf16v")
+_edge_meta_materials = Array[ExtResource("5_tdx67")]([SubResource("Resource_ooi2v")])
+fill_textures = Array[Texture2D]([ExtResource("7_1cnfg")])
+fill_texture_z_index = -10
+fill_texture_show_behind_parent = false
+fill_texture_scale = 0.2
+fill_texture_absolute_position = false
+fill_texture_absolute_rotation = false
+fill_texture_offset = Vector2(0, 0)
+fill_texture_angle_offset = 0.0
+fill_mesh_offset = 0.0
+render_offset = 0.0
+
+[sub_resource type="Resource" id="Resource_soomw"]
+script = ExtResource("8_s8hl0")
+begin = 0.0
+distance = 360.0
+edgeRendering = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_cxeum"]
+script = ExtResource("5_tdx67")
+normal_range = SubResource("Resource_soomw")
+weld = true
+taper_sharp_corners = false
+render = true
+z_index = 0
+z_as_relative = true
+offset = 0.0
+
+[sub_resource type="Resource" id="Resource_33h85"]
+script = ExtResource("2_j3mow")
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id="Resource_v45oq"]
+script = ExtResource("3_26gyn")
+position = Vector2(179.907, -125.336)
+point_in = Vector2(0, 0)
+point_out = Vector2(0, 0)
+properties = SubResource("Resource_33h85")
+
+[sub_resource type="Resource" id="Resource_6qh6k"]
+script = ExtResource("2_j3mow")
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id="Resource_3bvqr"]
+script = ExtResource("3_26gyn")
+position = Vector2(-186.395, -129.216)
+point_in = Vector2(0, 0)
+point_out = Vector2(0, 0)
+properties = SubResource("Resource_6qh6k")
+
+[sub_resource type="Resource" id="Resource_c5a3w"]
+script = ExtResource("2_j3mow")
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id="Resource_wem1l"]
+script = ExtResource("3_26gyn")
+position = Vector2(-190.753, 215.603)
+point_in = Vector2(0, 0)
+point_out = Vector2(0, 0)
+properties = SubResource("Resource_c5a3w")
+
+[sub_resource type="Resource" id="Resource_cyk2q"]
+script = ExtResource("2_j3mow")
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id="Resource_bfe61"]
+script = ExtResource("3_26gyn")
+position = Vector2(186.795, 210.916)
+point_in = Vector2(0, 0)
+point_out = Vector2(0, 0)
+properties = SubResource("Resource_cyk2q")
+
+[sub_resource type="Resource" id="Resource_qdrtk"]
+script = ExtResource("2_j3mow")
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id="Resource_5jica"]
+script = ExtResource("3_26gyn")
+position = Vector2(179.907, -125.336)
+point_in = Vector2(0, 0)
+point_out = Vector2(0, 0)
+properties = SubResource("Resource_qdrtk")
+
+[sub_resource type="Resource" id="Resource_d64cu"]
+script = ExtResource("4_qkxmh")
+_points = {
+0: SubResource("Resource_v45oq"),
+1: SubResource("Resource_3bvqr"),
+2: SubResource("Resource_wem1l"),
+3: SubResource("Resource_bfe61"),
+4: SubResource("Resource_5jica")
+}
+_point_order = PackedInt32Array(4, 3, 2, 1, 0)
+_constraints = {
+Vector2i(0, 4): 15
+}
+_next_key = 6
+_material_overrides = {
+Vector2i(1, 0): SubResource("Resource_cxeum")
+}
+tessellation_stages = 3
+tessellation_tolerance = 6.0
+curve_bake_interval = 20.0
+
+[sub_resource type="Resource" id="Resource_bvctw"]
+script = ExtResource("6_12nd4")
+textures = Array[Texture2D]([ExtResource("7_1cnfg")])
+textures_corner_outer = Array[Texture2D]([])
+textures_corner_inner = Array[Texture2D]([])
+textures_taper_left = Array[Texture2D]([])
+textures_taper_right = Array[Texture2D]([])
+textures_taper_corner_left = Array[Texture2D]([])
+textures_taper_corner_right = Array[Texture2D]([])
+randomize_texture = false
+use_corner_texture = false
+use_taper_texture = false
+fit_mode = 0
+
+[sub_resource type="Resource" id="Resource_is3du"]
+script = ExtResource("8_s8hl0")
+begin = 0.0
+distance = 360.0
+edgeRendering = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_rjm71"]
+script = ExtResource("5_tdx67")
+edge_material = SubResource("Resource_bvctw")
+normal_range = SubResource("Resource_is3du")
+weld = true
+taper_sharp_corners = false
+render = true
+z_index = 0
+z_as_relative = true
+offset = 0.0
+
+[sub_resource type="Resource" id="Resource_jlwfo"]
+script = ExtResource("9_cf16v")
+_edge_meta_materials = Array[ExtResource("5_tdx67")]([SubResource("Resource_rjm71")])
+fill_textures = Array[Texture2D]([ExtResource("7_1cnfg")])
+fill_texture_z_index = -10
+fill_texture_show_behind_parent = false
+fill_texture_scale = 0.2
+fill_texture_absolute_position = false
+fill_texture_absolute_rotation = false
+fill_texture_offset = Vector2(0, 0)
+fill_texture_angle_offset = 0.0
+fill_mesh_offset = 0.0
+render_offset = 0.0
+
+[node name="DemoScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bc5k7")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -10
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0822386, 0.17465, 0.224188, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 19.0
+offset_top = 14.0
+offset_right = 1632.0
+offset_bottom = 146.0
+theme_override_font_sizes/font_size = 20
+text = "TOP EDGES MATERIALS ARE OVERRIDEN FOR THE TWO SS2D_Shapes WITH RENDERING TO FALSE (SEE IN EDITOR)
+
+WE WILL DEMONSTRATE THAT THE OVERRIDEN EDGE MATERIAL IS NOT PERSISTED ON SHAPE RESPAWN"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 158.0
+offset_top = 456.0
+offset_right = 515.0
+offset_bottom = 502.0
+theme_override_font_sizes/font_size = 20
+text = "CONTROL SHAPE (NOT RESPAWNED)"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 635.0
+offset_top = 452.0
+offset_right = 1053.0
+offset_bottom = 498.0
+theme_override_font_sizes/font_size = 20
+text = "RESPAWNED SHAPE (TOP EDGE REAPPEARS)"
+
+[node name="SS2D_Shape_1" type="Node2D" parent="."]
+unique_name_in_owner = true
+texture_repeat = 2
+position = Vector2(330, 274)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_hwwxx")
+_points = SubResource("Resource_meie8")
+shape_material = SubResource("Resource_c3btm")
+
+[node name="SS2D_Shape_2" type="Node2D" parent="."]
+unique_name_in_owner = true
+texture_repeat = 2
+position = Vector2(840, 277)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_hwwxx")
+_points = SubResource("Resource_d64cu")
+shape_material = SubResource("Resource_jlwfo")
