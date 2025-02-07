@@ -1,5 +1,9 @@
 # SmartShape2D Point Array Incorrect Material Clear (MRP)
 
+## Linked issue
+
+https://github.com/SirRamEsq/SmartShape2D/issues/181
+
 ## Description
 
 This project demonstrates an issue with the SmartShape2D plugin (version 3.2.0) in Godot 4.3-stable, where material overrides in `SS2D_Point_Array` do not persist between `SS2D_Shape` instantiations when serialized in a `PackedScene`.
