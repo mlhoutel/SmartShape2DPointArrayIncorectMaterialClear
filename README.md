@@ -1,4 +1,4 @@
-# SmartShape2D Point Array Incorect Material Clear (MRP)
+# SmartShape2D Point Array Incorrect Material Clear (MRP)
 
 ## Description
 
